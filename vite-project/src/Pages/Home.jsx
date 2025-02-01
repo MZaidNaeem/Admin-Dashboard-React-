@@ -1,0 +1,8 @@
+import React from "react";
+import { Fragment } from "react";
+
+export const Home = () => {
+    return (<Fragment>
+        <h1>Main</h1>
+    </Fragment>);
+} 
