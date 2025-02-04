@@ -3,6 +3,8 @@ import { Fragment } from "react"
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Outlet, useNavigation } from "react-router-dom";
+import { SideBar } from "../Components/SideBar";
+import { OptionalThemes } from "../Components/OptionalThemes";
 
 export const AppLayout = () => {
 
@@ -17,8 +19,10 @@ export const AppLayout = () => {
     else {
 
         return (<Fragment>
+            <SideBar></SideBar>
             <Header></Header>
             <Outlet></Outlet>
+            <OptionalThemes></OptionalThemes>
             <Footer></Footer>
         </Fragment>);
     }

@@ -6,7 +6,13 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { AppLayout } from './Layout/AppLayout';
 import ErrorPage from './Layout/ErrorPage';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Home } from './Pages/Home';
+import { Ecommerce } from './Pages/Ecommerce';
+
+import { registerLicense } from '@syncfusion/ej2-base';
+
+// Register Syncfusion license key
+registerLicense('Ngo9BigBOggjHTQxAR8/V1NMaF1cXmhLYVF+WmFZfVtgdVVMYlpbQXRPMyBoS35Rc0ViW3ZfcHZdQ2RUUkF3');
+
 
 export const AppContext = createContext();
 
@@ -20,10 +26,16 @@ function App() {
       element: <AppLayout />,
       errorElement: <ErrorPage />,
       children: ([
+        // dashboard
         {
           path: "/",
-          element: <Home />
+          element: <Ecommerce />
         },
+
+        // pages
+        // Apps
+        // charts
+
 
       ])
     }

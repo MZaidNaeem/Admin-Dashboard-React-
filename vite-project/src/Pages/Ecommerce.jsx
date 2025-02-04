@@ -1,8 +1,8 @@
 import React from "react";
 import { Fragment } from "react";
 
-export const Home = () => {
+export const Ecommerce = () => {
     return (<Fragment>
-        <h1>Main</h1>
+        <h1>Ecommerce</h1>
     </Fragment>);
 } 
