@@ -1,8 +1,9 @@
 import React from "react";
 import { Fragment } from "react";
+import { NavBar } from "../Components/NavBar";
 
 export const Header = () => {
     return (<Fragment>
-        <h1>Header</h1>
+        <NavBar></NavBar>
     </Fragment>);
 };

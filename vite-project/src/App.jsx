@@ -1,5 +1,5 @@
 
-import React, { createContext } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import './App.css'
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
@@ -21,6 +21,7 @@ import { Area } from "./Pages/Charts/Area";
 import { Bars } from "./Pages/Charts/Bar";
 import { Pi } from "./Pages/Charts/Pi";
 import { Financial } from "./Pages/Charts/financial";
+import { ColorMapping } from "./Pages/Charts/colorMapping";
 import { Pyramid } from "./Pages/Charts/Pyramid";
 import { Stacked } from "./Pages/Charts/Stacked";
 
@@ -31,8 +32,40 @@ registerLicense('Ngo9BigBOggjHTQxAR8/V1NMaF1cXmhLYVF+WmFZfVtgdVVMYlpbQXRPMyBoS35
 export const AppContext = createContext();
 
 function App() {
+  // Global Variables 
+  const [activeMenu, setActiveMenu] = useState(true);
+  const [screenSize, setScreenSize] = useState(500);
+  const [isClicked, setIsClicked] = useState(false);
 
-  const stock = 55;
+  useEffect(() => {
+
+    const checkWidth = () => {
+      let w = window.innerWidth;
+      return w;
+
+    }
+
+    const handleScreenSize = () => {
+      const width = checkWidth();
+      setScreenSize(width)
+    }
+    handleScreenSize();
+
+    window.addEventListener('resize', handleScreenSize)
+
+    return () => window.removeEventListener('resize', handleScreenSize)
+  }, [setScreenSize])
+
+
+
+
+
+
+
+
+
+
+  // router 
 
   const router = createBrowserRouter([
     {
@@ -56,7 +89,7 @@ function App() {
           element: <Employees />
         },
         {
-          path: "/custumer",
+          path: "/customers",
           element: <Custumer />
         },
         // Apps
@@ -74,7 +107,7 @@ function App() {
           element: <ColorPicker />
         },
         {
-          path: "/calender",
+          path: "/calendar",
           element: <Calender />
         },
         // charts
@@ -88,11 +121,11 @@ function App() {
           element: <Area />
         },
         {
-          path: "/bars",
+          path: "/bar",
           element: <Bars />
         },
         {
-          path: "/pi",
+          path: "/pie",
           element: <Pi />
         },
         {
@@ -101,9 +134,14 @@ function App() {
         },
 
         {
+          path: "/color-mapping",
+          element: <ColorMapping />
+        },
+        {
           path: "/pyramid",
           element: <Pyramid />
         },
+
         {
           path: "/stacked",
           element: <Stacked />
@@ -119,7 +157,7 @@ function App() {
   const queryClient = new QueryClient();
 
   return (
-    <AppContext.Provider value={{ stock }}>
+    <AppContext.Provider value={{ activeMenu, setActiveMenu, screenSize, setScreenSize, isClicked, setIsClicked }}>
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router}></RouterProvider>
       </QueryClientProvider>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Fragment } from "react"
 import { Header } from "./Header";
 import { Footer } from "./Footer";
@@ -6,10 +6,31 @@ import { Outlet, useNavigation } from "react-router-dom";
 import { SideBar } from "../Components/SideBar";
 import { OptionalThemes } from "../Components/OptionalThemes";
 import { Theme } from "../Components/Theme";
+import { AppContext } from "../App";
 
 export const AppLayout = () => {
 
-    const ActiveMenu = false;
+    let { activeMenu, screenSize, isClicked, setActiveMenu } = useContext(AppContext);
+
+    useEffect(() => {
+        const handleSideBarOpening = () => {
+            // console.log('screenSize:', screenSize, 'isClicked:', isClicked);
+            if (screenSize < 400 && !isClicked) {
+                setActiveMenu(false);
+            }
+            if (screenSize >= 400 && !isClicked) {
+                setActiveMenu(true);
+            }
+
+        }
+
+        handleSideBarOpening();
+
+    }, [screenSize]);
+
+
+
+
 
     const navigation = useNavigation();
     if (navigation.state === "loading") {
@@ -22,12 +43,17 @@ export const AppLayout = () => {
     else {
 
         return (<Fragment>
-            {ActiveMenu ? <div>SideBar</div> : <div>!sideBar</div>}
-            <Header></Header>
-            <Theme></Theme>
-            <Outlet></Outlet>
+
+            <div className="container1 flex1">
+                <div className="left_col">   {activeMenu && <div><SideBar /></div>}</div>
+                <div className="right_col flex_1">
+                    <Header></Header>
+                    <div className={`${screenSize >= 400 && "navbarScreenSize"}`}><Outlet></Outlet></div>
+                </div>
+            </div>
+            {/* <Theme></Theme> */}
             <OptionalThemes></OptionalThemes>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </Fragment>);
     }
 
