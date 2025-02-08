@@ -31,11 +31,30 @@ registerLicense('Ngo9BigBOggjHTQxAR8/V1NMaF1cXmhLYVF+WmFZfVtgdVVMYlpbQXRPMyBoS35
 
 export const AppContext = createContext();
 
+
+
 function App() {
   // Global Variables 
   const [activeMenu, setActiveMenu] = useState(true);
   const [screenSize, setScreenSize] = useState(500);
   const [isClicked, setIsClicked] = useState(false);
+  const [initialState, setInitialState] = useState({
+    chat: false,
+    cart: false,
+    userProfile: false,
+    notification: false,
+  });
+
+  useEffect(() => {
+    if (activeMenu == true) {
+      setInitialState({
+        chat: false,
+        cart: false,
+        userProfile: false,
+        notification: false,
+      })
+    }
+  }, [activeMenu])
 
   useEffect(() => {
 
@@ -157,7 +176,7 @@ function App() {
   const queryClient = new QueryClient();
 
   return (
-    <AppContext.Provider value={{ activeMenu, setActiveMenu, screenSize, setScreenSize, isClicked, setIsClicked }}>
+    <AppContext.Provider value={{ activeMenu, setActiveMenu, screenSize, setScreenSize, isClicked, setIsClicked, initialState, setInitialState }}>
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router}></RouterProvider>
       </QueryClientProvider>

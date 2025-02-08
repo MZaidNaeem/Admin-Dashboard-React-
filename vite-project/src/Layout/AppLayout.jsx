@@ -45,7 +45,7 @@ export const AppLayout = () => {
         return (<Fragment>
 
             <div className="container1 flex1">
-                <div className="left_col">   {activeMenu && <div><SideBar /></div>}</div>
+                <div className={`left_col ${screenSize < 600 && "absolute1"}`} > {activeMenu && <div><SideBar /></div>}</div>
                 <div className="right_col flex_1">
                     <Header></Header>
                     <div className={`${screenSize >= 400 && "navbarScreenSize"}`}><Outlet></Outlet></div>
@@ -54,7 +54,7 @@ export const AppLayout = () => {
             {/* <Theme></Theme> */}
             <OptionalThemes></OptionalThemes>
             {/* <Footer></Footer> */}
-        </Fragment>);
+        </Fragment >);
     }
 
 }
