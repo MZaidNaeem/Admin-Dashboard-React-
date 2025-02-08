@@ -132,6 +132,15 @@ li:has(.active) {
   flex-grow: 1;
 }
 
+.space_between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex_column {
+  flex-direction: column;
+}
+
 /* .main {
   padding: 1rem;
   height: calc(100% - 4rem);
@@ -253,7 +262,7 @@ li:has(.active) {
 /* nav dropdown */
 .navbardropdown {
   width: 250px;
-  height: 500px;
+  height: 30rem;
   background-color: #F0F0F0;
   position: absolute;
   top: 3rem;
@@ -277,13 +286,101 @@ li:has(.active) {
 
 .chat {
   right: 0.5rem;
+  padding: 1rem;
+
 
 }
+
+.chat_header {
+  /* padding: 1rem 1rem; */
+  margin-bottom: 1rem;
+}
+
+.chat_header_right p {
+  margin: 0;
+}
+
+.chat_header_right {
+  gap: 1rem;
+  align-items: center;
+}
+
+.chat_header_right .text_1 {
+  font-weight: bolder;
+  font-size: 1.2rem;
+
+}
+
+.chat_header_right .text_2 {
+  font-size: .6rem;
+  padding: .5rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  background-color: rgb(64, 218, 64);
+
+}
+
+.chat_header_left {
+  color: red;
+}
+
+
+.chat_body {
+  flex-grow: 1;
+}
+
+.messages {
+  border-bottom: 1px solid black;
+  padding: .3rem;
+  gap: 1rem;
+}
+
+.messages:hover {
+  background-color: #cfcdcd;
+  cursor: pointer;
+}
+
+
+
+.messages img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+
+.message_left p {
+  margin: 0;
+}
+
+.message_left .time {
+  opacity: .6;
+
+}
+
 
 /* notification */
 
 .notification {
   right: 0.5rem;
+  height: 26rem !important;
+}
+
+.notification_img {
+  width: 3rem !important;
+  height: 3rem !important;
+  margin-top: 1rem;
+}
+
+.notification .text_2 {
+  background-color: #007bff !important;
 }
 
 /* userProfile */
@@ -292,8 +389,42 @@ li:has(.active) {
   right: 0.5rem;
 }
 
+.message_left .message {
+  font-weight: bold;
+}
 
+.messages .icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 40%;
+  -webkit-border-radius: 40%;
+  -moz-border-radius: 40%;
+  -ms-border-radius: 40%;
+  -o-border-radius: 40%;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}
 
+.userProfile {
+  height: 26rem !important;
+}
+
+.dropdownProfile {
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+}
+
+.dropdownProfile p {
+  margin: 0;
+}
+
+.dropdownProfile img {
+  height: 5rem;
+  width: 5rem;
+}
 
 /* nav Sized Styling */
 .navSizedStyling {
