@@ -26,7 +26,7 @@ import { Pyramid } from "./Pages/Charts/Pyramid";
 import { Stacked } from "./Pages/Charts/Stacked";
 
 // Register Syncfusion license key
-registerLicense('Ngo9BigBOggjHTQxAR8/V1NMaF1cXmhLYVF+WmFZfVtgdVVMYlpbQXRPMyBoS35Rc0ViW3ZfcHZdQ2RUUkF3');
+registerLicense('Ngo9BigBOggjHTQxAR8/V1NMaF1cXmhKYVB3WmFZfVtgfF9FZVZTQWYuP1ZhSXxWdkZjWH9Wc3JUTmVVVEU=');
 
 
 export const AppContext = createContext();
