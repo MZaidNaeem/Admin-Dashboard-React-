@@ -168,6 +168,10 @@ li:has(.active) {
   position: relative;
 }
 
+.fixed1 {
+  position: fixed;
+}
+
 .absolute1 {
   position: absolute;
   z-index: 1000;
@@ -213,6 +217,7 @@ li:has(.active) {
 /* ********************************************* Header **************************************************/
 /* navbar1 */
 .navbar1 {
+  position: relative;
   height: 3rem;
   display: flex;
   justify-content: space-between;
@@ -636,10 +641,37 @@ li:has(.active) {
 /* ********************************************* Content (main) **************************************************/
 
 .navbarScreenSize {
-  margin: 0 2rem;
+  padding: 0 1rem;
 }
 
+.sizeSettings {
+  overflow: scroll;
+  height: 93vh;
+
+}
+
+
+
 /* ********************************************* Global Media Query **************************************************/
+
+@media (max-width: 350px) {
+  .cart {
+    width: 100vw;
+  }
+
+
+
+}
+
+@media (max-width: 400px) {
+  .sizeSettings {
+    height: 97vh;
+  }
+
+
+
+}
+
 @media (max-width: 556px) {
   html {
     font-size: 77% !important;
