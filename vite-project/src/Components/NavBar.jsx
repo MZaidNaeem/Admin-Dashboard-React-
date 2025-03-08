@@ -21,8 +21,8 @@ const NavButton = ({ title, customFunc, icon, color, dotColor, children }) => {
         <div className="relative1">
             <TooltipComponent content={title} position="BottomCenter">
                 <button type="button" onClick={customFunc} style={{ color }}>{icon}</button>
-                {initialState[title] && children}
             </TooltipComponent>
+            {initialState[title] && children}
         </div>
     );
 }
@@ -79,7 +79,7 @@ export const NavBar = () => {
                         <img className="profileImg" src={name} alt="" />
                         <p className="profileText">
                             <span>Hi, </span>{' '}
-                            <span>Micheal</span>
+                            <span>Zaid</span>
                             <MdArrowDownward></MdArrowDownward>
                         </p>
                         {initialState.userProfile && <UserProfile />}

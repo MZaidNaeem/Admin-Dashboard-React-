@@ -4,9 +4,9 @@ import { FiSettings } from "react-icons/fi"
 
 export const OptionalThemes = () => {
     return <Fragment>
-        <div className="OptionalTheme_container">
+        <div className="OptionalTheme_container"  >
             <TooltipComponent content="Settings" position="Top">
-                <span className="OptionalTheme_Icon"><FiSettings /></span>
+                <span className="OptionalTheme_Icon" style={{ color: "blue" }}><FiSettings /></span>
             </TooltipComponent>
         </div>
 

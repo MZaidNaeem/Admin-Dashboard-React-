@@ -48,7 +48,7 @@ export const AppLayout = () => {
                 <div className={`left_col ${screenSize < 600 && "absolute1"}`} > {activeMenu && <div><SideBar /></div>}</div>
                 <div className="right_col  flex_1 ">
                     <Header></Header>
-                    <div className={`sizeSettings ${screenSize >= 400 && "navbarScreenSize"}`}><Outlet></Outlet></div>
+                    <div className={`sizeSettings ${screenSize >= 400 && "navbarScreenSize"}`} ><Outlet></Outlet></div>
                 </div>
             </div>
             {/* <Theme></Theme> */}

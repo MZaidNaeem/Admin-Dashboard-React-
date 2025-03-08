@@ -27,6 +27,7 @@ export const gridOrderImage = (props) => (
   <div>
     <img
       className="rounded-xl h-20 md:ml-3"
+      style={{ height: "3rem", width: "3rem", borderRadius: "50%" }}
       src={props.ProductImage}
       alt="order-item"
     />
@@ -37,7 +38,8 @@ export const gridOrderStatus = (props) => (
   <button
     type="button"
     style={{ background: props.StatusBg }}
-    className="text-white py-1 px-2 capitalize rounded-2xl text-md"
+
+    className="btn btn-sm "
   >
     {props.Status}
   </button>
@@ -72,7 +74,9 @@ export const kanbanGrid = [
 const gridEmployeeProfile = (props) => (
   <div className="flex items-center gap-2">
     <img
-      className="rounded-full w-10 h-10"
+      className=""
+      style={{ width: "2rem", height: "2rem", borderRadius: "50%" }}
+
       src={props.EmployeeImage}
       alt="employee"
     />
@@ -131,7 +135,7 @@ export const EditorData = () => (
 const customerGridImage = (props) => (
   <div className="image flex gap-4">
     <img
-      className="rounded-full w-10 h-10"
+      style={{ width: "2rem", height: "2rem", borderRadius: "50%" }}
       src={props.CustomerImage}
       alt="employee"
     />
@@ -406,23 +410,20 @@ export const LinePrimaryYAxis = {
 };
 
 export const customersGrid = [
-  { type: 'checkbox', width: '50' },
+  { type: 'checkbox' },
   {
     headerText: 'Name',
-    width: '150',
     template: customerGridImage,
     textAlign: 'Center'
   },
   {
     field: 'ProjectName',
     headerText: 'Project Name',
-    width: '150',
     textAlign: 'Center'
   },
   {
     field: 'Status',
     headerText: 'Status',
-    width: '130',
     format: 'yMd',
     textAlign: 'Center',
     template: customerGridStatus
@@ -430,14 +431,12 @@ export const customersGrid = [
   {
     field: 'Weeks',
     headerText: 'Weeks',
-    width: '100',
     format: 'C2',
     textAlign: 'Center'
   },
   {
     field: 'Budget',
     headerText: 'Budget',
-    width: '100',
     format: 'yMd',
     textAlign: 'Center'
   },
@@ -445,14 +444,12 @@ export const customersGrid = [
   {
     field: 'Location',
     headerText: 'Location',
-    width: '150',
     textAlign: 'Center'
   },
 
   {
     field: 'CustomerID',
     headerText: 'Customer ID',
-    width: '120',
     textAlign: 'Center',
     isPrimaryKey: true,
   },
@@ -462,25 +459,25 @@ export const customersGrid = [
 export const employeesGrid = [
   {
     headerText: 'Employee',
-    width: '150',
+
     template: gridEmployeeProfile,
     textAlign: 'Center'
   },
   {
     field: 'Name',
     headerText: '',
-    width: '0',
+
     textAlign: 'Center',
   },
   {
     field: 'Title',
     headerText: 'Designation',
-    width: '170',
+
     textAlign: 'Center',
   },
   {
     headerText: 'Country',
-    width: '120',
+
     textAlign: 'Center',
     template: gridEmployeeCountry
   },
@@ -488,7 +485,7 @@ export const employeesGrid = [
   {
     field: 'HireDate',
     headerText: 'Hire Date',
-    width: '135',
+
     format: 'yMd',
     textAlign: 'Center'
   },
@@ -496,13 +493,13 @@ export const employeesGrid = [
   {
     field: 'ReportsTo',
     headerText: 'Reports To',
-    width: '120',
+
     textAlign: 'Center'
   },
   {
     field: 'EmployeeID',
     headerText: 'Employee ID',
-    width: '125',
+
     textAlign: 'Center'
   },
 ];
@@ -913,19 +910,16 @@ export const ordersGrid = [
     headerText: 'Image',
     template: gridOrderImage,
     textAlign: 'Center',
-    width: '120',
   },
   {
     field: 'OrderItems',
     headerText: 'Item',
-    width: '150',
     editType: 'dropdownedit',
     textAlign: 'Center',
   },
   {
     field: 'CustomerName',
     headerText: 'Customer Name',
-    width: '150',
     textAlign: 'Center',
   },
   {
@@ -934,26 +928,22 @@ export const ordersGrid = [
     format: 'C2',
     textAlign: 'Center',
     editType: 'numericedit',
-    width: '150',
   },
   {
     headerText: 'Status',
     template: gridOrderStatus,
     field: 'OrderItems',
     textAlign: 'Center',
-    width: '120',
   },
   {
     field: 'OrderID',
     headerText: 'Order ID',
-    width: '120',
     textAlign: 'Center',
   },
 
   {
     field: 'Location',
     headerText: 'Location',
-    width: '150',
     textAlign: 'Center',
   },
 ];
@@ -1004,8 +994,8 @@ export const customersData = [
   {
     CustomerID: 1004,
 
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
+    CustomerName: 'Zaid Naeem',
+    CustomerEmail: 'Zaid@gmail.com',
     ProjectName: 'MedicalPro WP Theme',
     Status: 'Completed',
     CustomerImage:

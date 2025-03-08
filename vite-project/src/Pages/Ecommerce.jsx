@@ -1,8 +1,85 @@
 import React from "react";
 import { Fragment } from "react";
+import { BsCurrencyDollar } from 'react-icons/bs'
+import { GoDot } from "react-icons/go";
+import { earningData, SparklineAreaData, ecomPieChartData } from "../data/dummy";
+import { SparkLine } from "../Components/Charts/SparkLine";
+import { Stacked } from "./Charts/Stacked";
 
 export const Ecommerce = () => {
+    const dropdown = () => {
+        alert(`No Data to Download Yet`);
+    }
+    const dropdownfunction = (title) => {
+        alert(`No ${title} Data To See Yet`);
+    }
+
+
     return (<Fragment>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione amet laboriosam, eveniet fugit odit maxime accusamus. Alias, voluptatum. Suscipit quam autem nulla non? Quo sed tempora expedita, architecto commodi porro eos perspiciatis eaque. Officiis, commodi nisi. Voluptatibus beatae dolor sunt dicta? Iusto qui fugit nesciunt iste a asperiores facere consequatur earum dolor, accusantium aliquid cumque deserunt neque inventore quae maiores tempore, eos, culpa ea dolore cupiditate nisi? Optio vero vitae provident, beatae assumenda cumque culpa, quidem possimus, saepe totam ullam delectus ut eius accusantium rerum molestiae magni nostrum! Tenetur sit nostrum soluta quam corporis! Commodi assumenda laboriosam repudiandae pariatur magnam eaque, officiis vel quo quam animi ad quas laudantium qui odio est ipsam explicabo quaerat sit tempora nemo dolor corporis quis. Sequi praesentium, veritatis nobis ducimus perferendis animi esse reiciendis sunt aliquam, laboriosam hic ullam suscipit numquam reprehenderit provident, aspernatur earum cum optio fuga. Amet perspiciatis accusamus voluptate placeat omnis eligendi modi nisi totam laborum iste, dolorem expedita vel sapiente incidunt hic. Culpa vel nesciunt itaque deleniti velit ea dolorum sit doloribus accusamus ut? Esse at error nisi exercitationem, doloremque facilis rerum recusandae reiciendis facere deleniti voluptas placeat nulla eaque sed consectetur animi in voluptatem porro minima. Placeat at quod sit, animi omnis officiis magnam sapiente fuga rerum possimus officia tenetur vitae quasi velit quae reiciendis ipsa. Quam alias minima odio expedita voluptate impedit totam dolorum esse, adipisci laudantium dolorem modi, sunt perspiciatis debitis, obcaecati deserunt eligendi! Aspernatur et officia quibusdam, quaerat vitae adipisci reprehenderit repellat modi eaque deleniti rerum temporibus iusto dolore quisquam minima dolorum? Quod sapiente aliquid impedit quas provident iste placeat enim ullam quo, incidunt sed adipisci eius ut quisquam doloribus odio, iure ad praesentium numquam, modi reprehenderit. Minima, et! Ad ducimus nemo, iure libero tempora deleniti sapiente ipsam dolore veniam hic fuga minus ullam eveniet delectus voluptatem voluptatibus corporis possimus mollitia blanditiis nihil reiciendis. Error ab facilis possimus architecto porro fuga voluptatibus reprehenderit, natus optio magni amet facere quam, nihil repellat dolore. Doloremque atque tempore commodi autem nemo, fugiat voluptatum vel delectus cumque voluptate quo maxime iste maiores officia a quam aliquam impedit vero laboriosam at pariatur eveniet. Tempore, corrupti delectus. Deserunt atque fugit, officiis rem, vero ea hic quibusdam, magnam est incidunt qui facere dicta aut non. Enim esse incidunt rerum consectetur blanditiis facere vel beatae, fuga praesentium tempora necessitatibus eum aut labore, distinctio ad delectus corporis iste odio neque ea a eligendi itaque. Fugit non earum asperiores eaque voluptate placeat, doloremque quidem ex quasi impedit provident ipsum enim dicta architecto aliquam, corporis ipsa neque accusamus voluptates optio atque quaerat? Voluptatum consequatur quos perferendis voluptates rem, temporibus nemo reiciendis ducimus, ad magnam vitae voluptatibus impedit, nulla quia! Modi harum excepturi culpa quibusdam obcaecati consectetur, consequuntur dignissimos. Tenetur, debitis. Vitae, nemo. Totam quaerat suscipit ipsum sunt facere tempora nemo velit maxime iusto nisi doloribus maiores perferendis voluptatibus labore earum beatae nulla laboriosam dignissimos amet, quos ipsam aspernatur. Quae doloribus corporis nulla molestiae perspiciatis vel voluptatum sequi sapiente porro quia minus pariatur, suscipit facere quis, veniam, voluptas quasi deserunt nostrum ea! Molestias ad eum voluptas ullam magni veritatis dolor tempore, dicta distinctio animi vitae. Nostrum cum quod sint reprehenderit? Id quas nesciunt incidunt maiores impedit accusamus a possimus vel ex molestias ut sit perferendis esse ullam, ea architecto autem provident harum aliquam reiciendis? Commodi soluta quod mollitia tenetur explicabo expedita iusto, sit velit quaerat labore, earum eum in vel debitis corrupti aut consectetur cum veritatis, modi architecto voluptates nesciunt sint provident reprehenderit. Saepe odit eos, perspiciatis ipsa natus reiciendis delectus laudantium nihil, voluptatum aspernatur explicabo deleniti neque ducimus magni, necessitatibus debitis dolor corporis itaque similique eveniet incidunt ea. Quasi quisquam ipsum illum. Aut quidem suscipit placeat aliquid at quod? Esse voluptatum quis veniam tenetur eius at rem, molestiae sapiente impedit maxime atque dolore commodi quidem doloribus earum quo quos suscipit, asperiores optio consequatur ratione. Provident eius magni maxime facere sed eum ipsa illum, unde et. Voluptatem fugit facilis, consectetur dolores eaque pariatur, consequuntur vel harum libero id possimus! Unde earum suscipit consequatur, est similique necessitatibus dolorum hic saepe placeat recusandae temporibus nisi veniam, incidunt optio quae quo eveniet voluptatem ipsa neque! A nostrum sunt expedita quisquam nobis provident consequatur temporibus architecto, odit molestiae cumque aspernatur omnis rerum quaerat, doloremque ex reiciendis rem iure saepe, eos nihil odio inventore ad laboriosam. A hic explicabo accusantium eius molestias similique consequuntur ducimus doloremque repellat architecto! Sapiente minima optio ullam nobis voluptas tempora a eaque. Consectetur veritatis sint repellat perspiciatis, dicta quos blanditiis modi nemo ad harum fugiat labore voluptate quisquam repellendus est deleniti quis possimus quae pariatur? Inventore totam deserunt porro nam recusandae excepturi corporis placeat nemo aliquid, voluptas neque, quidem rerum error iure dolorum id tenetur, provident at harum dolores? Voluptates voluptate eos assumenda hic illo rem magnam sapiente quia, numquam corrupti inventore aliquid possimus dolores ipsum officia facere, culpa tenetur temporibus nemo eum autem labore cupiditate. Consectetur aut explicabo eum, dolorem ullam nemo error quo alias. Iure vel ut iste rem voluptatum impedit reprehenderit provident, totam vitae animi nam accusamus reiciendis. Consequatur sit nihil minus optio distinctio nemo! Adipisci pariatur commodi unde repellendus minima quos at! Sit ipsa voluptas sapiente, magni modi porro atque eligendi blanditiis repellendus labore provident hic aspernatur magnam totam nesciunt quidem aperiam rerum iste expedita ad illo. Tempora consequuntur magnam est amet cumque aperiam, quos magni nostrum? Rem veritatis voluptates, amet nam animi possimus doloribus modi eaque nisi dolor eos omnis expedita ducimus quasi eveniet ipsa quia necessitatibus earum veniam alias ad esse explicabo culpa! Optio cupiditate reprehenderit repellendus, reiciendis laudantium, quisquam quibusdam nisi rerum iusto aliquid, similique quia eligendi. Quos nulla neque eaque nostrum vel magnam soluta officia facilis explicabo ducimus ipsum numquam cumque vitae suscipit eius nesciunt commodi natus quia aliquam, veritatis voluptates sint saepe esse! Quidem architecto tempore aperiam soluta unde modi omnis ipsa. Recusandae quo vitae molestias nobis. Odit consectetur ut ullam quae magni dignissimos perspiciatis dicta tempora facilis, fuga vel, necessitatibus quam qui cum vitae excepturi laborum quis? Consequuntur voluptatum quisquam incidunt doloremque repellendus voluptatibus nisi molestiae, qui soluta.
-    </Fragment>);
+        <div className="ecommerece_container flex1 flex_column ">
+            <div className="hero_img" >
+                <div className="hero_img_content">
+                    <h1>Earning</h1>
+                    <p>$ 2,000,000</p>
+                    <button onClick={dropdown} className="btn btn-primary " >Download</button>
+                </div>
+            </div>
+
+            <div className="ecommerce_functions flex1  flex_wrap" >
+                {earningData.map((items, index) => {
+                    return <div key={items.title} shadow={items.iconBg} style={{ backgroundColor: items.iconBg }} className="ecommerce_function flex1 flex_column">
+                        <button onClick={() => { dropdownfunction(items.title) }} className="btn function_btn" style={{ color: items.iconColor, backgroundColor: items.iconBg }}>
+                            {items.icon}
+                        </button>
+                        <p>
+                            <span>{items.amount}</span>
+                            &nbsp;&nbsp;
+                            <span style={{ opacity: ".7" }}>{items.percentage}</span>
+                        </p>
+                        <p >{items.title}</p>
+                    </div>
+                })}
+
+            </div>
+
+            <div className="graphSection flex1 flex_column">
+                <div className="graphSectionHeader flex1 ">
+                    <h1>Revenue</h1>
+                    <div className="graphHeaderRight">
+                        <span><GoDot /> Expense </span>
+                        <span style={{ color: "red" }}><GoDot></GoDot> Budget</span>
+
+                    </div>
+
+                </div>
+                <div className="graphSectionBody  grid1 grid_two_cols1">
+                    <div className="graphSectionBodyLeft flex1 flex_column space_evenly align_center"  >
+                        <div className="graph_content flex1 flex_column " style={{ gap: "1rem", marginLeft: "1rem" }}>
+                            <div className="graph_left_income"  >
+                                <h3>$93438</h3> <span className="badge">EN</span>
+                            </div>
+                            <div>
+                                <h3>$93438</h3>
+                            </div>
+                        </div>
+                        <div >
+                            <SparkLine currentcolor="blue" id="line-sparkline" type="Line" height="150" width="190" data={SparklineAreaData} color="blue"></SparkLine>
+                        </div>
+                        <div className="graphButton" style={{ marginLeft: "1rem" }}>
+                            <button className="btn btn-outline-primary">Download Report</button>
+                        </div>
+
+                    </div>
+                    <div className="graphSectionBodyRight">
+                        <Stacked width={"190"} height="100%"></Stacked>
+                    </div>
+                </div>
+
+
+            </div>
+            <div style={{ marginBottom: "4rem" }}></div>
+
+
+        </div>
+    </Fragment >);
 } 
