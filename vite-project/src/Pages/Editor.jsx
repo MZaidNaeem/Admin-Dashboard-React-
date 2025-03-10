@@ -4,11 +4,13 @@ import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent,
 
 export const Editor = () => {
     return <Fragment>
-        <RichTextEditorComponent >
-            <EditorData />
-            <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar]} />
-        </RichTextEditorComponent>
-        <div style={{ marginBottom: "4rem" }}></div>
+        <div className="apps">
+            <RichTextEditorComponent >
+                <EditorData />
+                <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar]} />
+            </RichTextEditorComponent>
+            <div style={{ marginBottom: "4rem" }}></div>
+        </div>
 
     </Fragment>
 }

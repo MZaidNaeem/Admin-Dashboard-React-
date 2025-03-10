@@ -10,7 +10,7 @@ export const Custumer = memo(() => {
 
     return (
         <Fragment>
-            <div className="Custumer" style={{ width: "100%", display: "block", overflowY: "scroll" }}>
+            <div className="Custumer" style={{ width: "100%", display: "block", overflowY: "scroll", padding: "2rem" }}>
                 <GridComponent
                     dataSource={customersData}
                     enableHover={false}

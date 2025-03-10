@@ -8,7 +8,7 @@ export const Orders = memo(() => {
 
     return (
         <Fragment>
-            <div className="orders" style={{ width: "100%", display: "block", overflowY: "scroll" }} >
+            <div className="orders" style={{ width: "100%", display: "block", overflowY: "scroll", padding: "2rem" }} >
                 <GridComponent GridComponent
                     id="gridcomp"
                     dataSource={ordersData}

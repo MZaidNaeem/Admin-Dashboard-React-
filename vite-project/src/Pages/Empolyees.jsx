@@ -12,7 +12,7 @@ export const Employees = memo(() => {
     return (
 
         <Fragment>
-            <div className="Employees" style={{ width: "100%", display: "block", overflowY: "scroll" }}>
+            <div className="Employees" style={{ width: "100%", display: "block", overflowY: "scroll", padding: "2rem" }}>
                 <GridComponent
                     dataSource={employeesData}
                     width="auto"
