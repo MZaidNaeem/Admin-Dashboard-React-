@@ -852,7 +852,8 @@ li:has(.active) {
 .lineChart {
   width: 100%;
   height: 100%;
-  padding: 4rem;
+  overflow-y: auto;
+  padding: 2rem;
   margin-bottom: 5rem;
   border: 1px solid rgb(228, 220, 220);
   background-color: #f0f0f0;
@@ -981,7 +982,7 @@ li:has(.active) {
 
 
 
-@media (max-width: 600px) and (min-width: 556px) {
+@media (max-width: 600px) and (min-width: 0px) {
   .apps {
     width: 100vw;
   }
