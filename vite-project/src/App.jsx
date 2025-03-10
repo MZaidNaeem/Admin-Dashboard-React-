@@ -14,7 +14,6 @@ import { Employees } from "./Pages/Empolyees";
 import { Custumer } from "./Pages/Custumer";
 import { Kanban } from "./Pages/Kanban";
 import { Editor } from "./Pages/Editor";
-import { ColorPicker } from "./Pages/ColorPicker";
 import { Calender } from "./Pages/Calender";
 import { Line } from "./Pages/Charts/Line";
 import { Area } from "./Pages/Charts/Area";
@@ -121,10 +120,7 @@ function App() {
           path: "/editor",
           element: <Editor />
         },
-        {
-          path: "/color-picker",
-          element: <ColorPicker />
-        },
+
         {
           path: "/calendar",
           element: <Calender />
