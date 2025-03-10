@@ -4,7 +4,7 @@ import { BsCurrencyDollar } from 'react-icons/bs'
 import { GoDot } from "react-icons/go";
 import { earningData, SparklineAreaData, ecomPieChartData } from "../data/dummy";
 import { SparkLine } from "../Components/Charts/SparkLine";
-import { Stacked } from "./Charts/Stacked";
+import { Stacked } from "../Components/Charts/Stacked";
 
 export const Ecommerce = () => {
     const dropdown = () => {

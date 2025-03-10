@@ -1,5 +1,5 @@
 import React, { Fragment, memo } from 'react';
-import { GridComponent, ColumnsDirective, ColumnDirective, Page, Selection, Inject, Edit, Toolbar, Sort, Filter } from '@syncfusion/ej2-react-grids';
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Selection, Inject, Edit, Toolbar, Sort, Filter, Resize } from '@syncfusion/ej2-react-grids';
 
 import { customersData, customersGrid } from '../data/dummy';
 
@@ -10,7 +10,7 @@ export const Custumer = memo(() => {
 
     return (
         <Fragment>
-            <div className="orders">
+            <div className="Custumer" style={{ width: "100%", display: "block", overflowY: "scroll" }}>
                 <GridComponent
                     dataSource={customersData}
                     enableHover={false}
@@ -25,7 +25,7 @@ export const Custumer = memo(() => {
                     <ColumnsDirective>
                         {customersGrid.map((item, index) => <ColumnDirective key={index} {...item} allowResizing={true} minWidth={"10"} />)}
                     </ColumnsDirective>
-                    <Inject services={[Page, Selection, Toolbar, Edit, Sort, Filter]} />
+                    <Inject services={[Page, Resize, Selection, Toolbar, Edit, Sort, Filter]} />
                 </GridComponent>
             </div>
             <div style={{ marginBottom: "8rem" }}></div>

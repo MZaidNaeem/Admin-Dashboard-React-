@@ -1,7 +1,7 @@
 
 
 import React, { Fragment, memo } from 'react';
-import { GridComponent, Inject, ColumnsDirective, ColumnDirective, Search, Page } from '@syncfusion/ej2-react-grids';
+import { GridComponent, Inject, ColumnsDirective, ColumnDirective, Resize, Page } from '@syncfusion/ej2-react-grids';
 
 import { employeesData, employeesGrid } from '../data/dummy';
 
@@ -12,7 +12,7 @@ export const Employees = memo(() => {
     return (
 
         <Fragment>
-            <div className="orders">
+            <div className="Employees" style={{ width: "100%", display: "block", overflowY: "scroll" }}>
                 <GridComponent
                     dataSource={employeesData}
                     width="auto"
@@ -26,7 +26,7 @@ export const Employees = memo(() => {
                         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
                         {employeesGrid.map((item, index) => <ColumnDirective key={index} {...item} allowResizing={true} minWidth={"10"} />)}
                     </ColumnsDirective>
-                    <Inject services={[Page]} />
+                    <Inject services={[Page, Resize]} />
 
                 </GridComponent>
             </div>

@@ -23,7 +23,7 @@ import { Pi } from "./Pages/Charts/Pi";
 import { Financial } from "./Pages/Charts/financial";
 import { ColorMapping } from "./Pages/Charts/colorMapping";
 import { Pyramid } from "./Pages/Charts/Pyramid";
-import { Stacked } from "./Pages/Charts/Stacked";
+import { Stack } from "./Pages/Charts/Stacked";
 
 // Register Syncfusion license key
 registerLicense('Ngo9BigBOggjHTQxAR8/V1NMaF1cXmhKYVB3WmFZfVtgfF9FZVZTQWYuP1ZhSXxWdkZjWH9Wc3JUTmVVVEU=');
@@ -163,7 +163,7 @@ function App() {
 
         {
           path: "/stacked",
-          element: <Stacked />
+          element: <Stack />
         }
 
 
